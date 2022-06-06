@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NUnitXMLWrite": {
+      "commandName": "Project",
+      "commandLineArgs": "xmlPath=\"C:\\Users\\p.romash\\PROJECTS\\Experiments\\NUnitXMLWrite\\Documents\\FullDBSingleTestResult.xml\" resultFilepath=\"C:\\Users\\p.romash\\PROJECTS\\Experiments\\NUnitXMLWrite\\TestResult\\result.txt\""
+    }
+  }
+}

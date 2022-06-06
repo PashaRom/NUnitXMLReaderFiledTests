@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitXMLWrite", "NUnitXMLWrite\NUnitXMLWrite.csproj", "{ACE79F15-559F-40C9-865E-DC773E44BD50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACE79F15-559F-40C9-865E-DC773E44BD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE79F15-559F-40C9-865E-DC773E44BD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE79F15-559F-40C9-865E-DC773E44BD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE79F15-559F-40C9-865E-DC773E44BD50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EBCC6C2-5D84-44DF-AB08-A0E7E21B0405}
+	EndGlobalSection
+EndGlobal
