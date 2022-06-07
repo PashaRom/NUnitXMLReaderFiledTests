@@ -3,12 +3,12 @@ using System.Xml;
 using System.Text;
 using System.IO;
 
-namespace NUnitXMLWrite
+namespace NUnitXMLReader
 {
     class Program
     {
         private static string _xmlPath = String.Empty;
-        private static string _resultFilepath = Path.Combine(Directory.GetCurrentDirectory(), "resultFailedTest.txt");
+        private static string _resultFilePath = Path.Combine(Directory.GetCurrentDirectory(), "resultFailedTest.txt");
         private const string testCaseElementName = "test-case";
         private const string resultAtributeName = "result";
         private const string resaltAtributeValue = "Failed";
@@ -16,6 +16,8 @@ namespace NUnitXMLWrite
         private const string propertyAtributName = "value";
         static int Main(string[] args)
         {
+            var configuration = Configuration.Get;
+            
             if(args.Length == 0)
             {
                 Console.WriteLine("Please enter arguments or use -h");
@@ -30,11 +32,12 @@ namespace NUnitXMLWrite
                 }
                 else if (arg.Contains("resultFilepath"))
                 {
-                    _resultFilepath = GetArgValue(arg);
+                    _resultFilePath = GetArgValue(arg);
                 }
                 else if(arg.Contains("-h"))
                 {
                     PrintInfo();
+                    return 1;
                 }
 
             }
@@ -71,7 +74,7 @@ namespace NUnitXMLWrite
 
             }
 
-            File.WriteAllText(_resultFilepath, resultString.ToString());
+            File.WriteAllText(_resultFilePath, resultString.ToString());
 
             Console.ReadKey();
             return 0;
