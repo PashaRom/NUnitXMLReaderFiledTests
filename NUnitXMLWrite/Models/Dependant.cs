@@ -9,5 +9,6 @@ namespace NUnitXMLReader.Models
         public int Main { get; set; }
         [JsonPropertyName("dependents")]
         public List<int> Dependents { get; set; }
+        public bool Added { get; set; } = false;
     }
 }

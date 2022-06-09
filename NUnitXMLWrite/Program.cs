@@ -2,6 +2,7 @@
 using System.Xml;
 using System.Text;
 using System.IO;
+using System.Linq;
 
 namespace NUnitXMLReader
 {
@@ -17,7 +18,7 @@ namespace NUnitXMLReader
         static int Main(string[] args)
         {
             var configuration = Configuration.Get;
-            
+
             if(args.Length == 0)
             {
                 Console.WriteLine("Please enter arguments or use -h");
@@ -66,6 +67,21 @@ namespace NUnitXMLReader
                             {
                                 Console.Write(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
                                 resultString.Append(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
+
+                                foreach(var depTest in configuration.Dependences)
+                                {
+                                    var dependent = depTest.Dependents.Where(item => item == result)
+                                        .FirstOrDefault();
+
+                                    if (dependent != 0)
+                                    {
+                                        if (!depTest.Added)
+                                        {
+                                            resultString.Append(testCasesList.Count != counter ? $"cat == {depTest.Main} || " : $"cat == {depTest.Main}");
+                                            depTest.Added = true;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -80,7 +96,7 @@ namespace NUnitXMLReader
             return 0;
         }
 
-        private static string GetArgValue(string arg) => arg.Split("=")[1]; 
+        private static string GetArgValue(string arg) => arg.Split("=")[1];
 
         private static void PrintInfo()
         {
