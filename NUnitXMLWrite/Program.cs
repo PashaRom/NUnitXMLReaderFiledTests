@@ -3,6 +3,7 @@ using System.Xml;
 using System.Text;
 using System.IO;
 using System.Linq;
+using NLog;
 
 namespace NUnitXMLReader
 {
@@ -15,84 +16,92 @@ namespace NUnitXMLReader
         private const string resaltAtributeValue = "Failed";
         private const string propertyElementName = "property";
         private const string propertyAtributName = "value";
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         static int Main(string[] args)
         {
-            var configuration = Configuration.Get;
-
-            if(args.Length == 0)
+            try
             {
-                Console.WriteLine("Please enter arguments or use -h");
-                return 1;
-            }
+                var configuration = Configuration.Get;
 
-            foreach(var arg in args)
-            {
-                if(arg.Contains("xmlPath"))
+                if(args.Length == 0)
                 {
-                    _xmlPath = GetArgValue(arg);
-                }
-                else if (arg.Contains("resultFilepath"))
-                {
-                    _resultFilePath = GetArgValue(arg);
-                }
-                else if(arg.Contains("-h"))
-                {
-                    PrintInfo();
+                    Console.WriteLine("Please enter arguments or use -h");
                     return 1;
                 }
 
-            }
-
-            var xmlDoc = new XmlDocument();
-            xmlDoc.Load(_xmlPath);
-
-            XmlElement? root = xmlDoc.DocumentElement;
-            StringBuilder resultString = new StringBuilder();
-
-            if(root != null)
-            {
-                XmlNodeList testCasesList = root.GetElementsByTagName(testCaseElementName);
-                var counter = 1;
-                foreach(XmlElement testCase in testCasesList)
+                foreach(var arg in args)
                 {
-                    var resultAtribute = testCase.GetAttribute(resultAtributeName);
-                    if(resultAtribute != null && resultAtribute.Equals(resaltAtributeValue))
+                    if(arg.Contains("xmlPath"))
                     {
-                        XmlNodeList propertyElements = testCase.GetElementsByTagName(propertyElementName);
+                        _xmlPath = GetArgValue(arg);
+                    }
+                    else if (arg.Contains("resultFilepath"))
+                    {
+                        _resultFilePath = GetArgValue(arg);
+                    }
+                    else if(arg.Contains("-h"))
+                    {
+                        PrintInfo();
+                        return 1;
+                    }
 
-                        foreach(XmlElement property in propertyElements)
+                }
+
+                var xmlDoc = new XmlDocument();
+                xmlDoc.Load(_xmlPath);
+
+                XmlElement? root = xmlDoc.DocumentElement;
+                StringBuilder resultString = new StringBuilder();
+
+                if(root != null)
+                {
+                    XmlNodeList testCasesList = root.GetElementsByTagName(testCaseElementName);
+                    var counter = 1;
+                    foreach(XmlElement testCase in testCasesList)
+                    {
+                        var resultAtribute = testCase.GetAttribute(resultAtributeName);
+                        if(resultAtribute != null && resultAtribute.Equals(resaltAtributeValue))
                         {
-                            var numberOfTestCase = property.GetAttribute(propertyAtributName);
-                            if(int.TryParse(numberOfTestCase, out int result))
+                            XmlNodeList propertyElements = testCase.GetElementsByTagName(propertyElementName);
+
+                            foreach(XmlElement property in propertyElements)
                             {
-                                Console.Write(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
-                                resultString.Append(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
-
-                                foreach(var depTest in configuration.Dependences)
+                                var numberOfTestCase = property.GetAttribute(propertyAtributName);
+                                if(int.TryParse(numberOfTestCase, out int result))
                                 {
-                                    var dependent = depTest.Dependents.Where(item => item == result)
-                                        .FirstOrDefault();
+                                    Console.Write(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
+                                    resultString.Append(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
 
-                                    if (dependent != 0)
+                                    foreach(var depTest in configuration.Dependences)
                                     {
-                                        if (!depTest.Added)
+                                        var dependent = depTest.Dependents.Where(item => item == result)
+                                            .FirstOrDefault();
+
+                                        if (dependent != 0)
                                         {
-                                            resultString.Append(testCasesList.Count != counter ? $"cat == {depTest.Main} || " : $"cat == {depTest.Main}");
-                                            depTest.Added = true;
+                                            if (!depTest.Added)
+                                            {
+                                                resultString.Append(testCasesList.Count != counter ? $"cat == {depTest.Main} || " : $"cat == {depTest.Main}");
+                                                depTest.Added = true;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
+                        counter++;
                     }
-                    counter++;
+
                 }
 
+                File.WriteAllText(_resultFilePath, resultString.ToString());
             }
-
-            File.WriteAllText(_resultFilePath, resultString.ToString());
-
-            Console.ReadKey();
+            catch(Exception e)
+            {
+                logger.Error(e.Message);
+                logger.Trace(e.StackTrace);
+            }
+            //Console.ReadKey();
             return 0;
         }
 
