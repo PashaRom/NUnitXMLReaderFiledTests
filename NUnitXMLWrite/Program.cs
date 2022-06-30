@@ -4,13 +4,13 @@ using System.Text;
 using System.IO;
 using System.Linq;
 using NLog;
+using NUnitXMLReader.Wait;
+using NUnitXMLReader.Models;
 
 namespace NUnitXMLReader
 {
     class Program
     {
-        private static string _xmlPath = String.Empty;
-        private static string _resultFilePath = Path.Combine(Directory.GetCurrentDirectory(), "resultFailedTest.txt");
         private const string testCaseElementName = "test-case";
         private const string resultAtributeName = "result";
         private const string resaltAtributeValue = "Failed";
@@ -29,26 +29,20 @@ namespace NUnitXMLReader
                     return 1;
                 }
 
-                foreach(var arg in args)
-                {
-                    if(arg.Contains("xmlPath"))
-                    {
-                        _xmlPath = GetArgValue(arg);
-                    }
-                    else if (arg.Contains("resultFilepath"))
-                    {
-                        _resultFilePath = GetArgValue(arg);
-                    }
-                    else if(arg.Contains("-h"))
-                    {
-                        PrintInfo();
-                        return 1;
-                    }
+                Argument arguments = new Argument(args);
 
+                if(WaitCondition.Retry(
+                    () => !File.Exists(arguments.XmlPath),
+                    arguments.Retry,
+                    TimeSpan.FromSeconds(arguments.Timeout)))
+                {
+                    var errorMessage = $"File '{arguments.XmlPath}' is not exist after retry {arguments.Retry} times.";
+                    Console.WriteLine(errorMessage);
+                    logger.Error(errorMessage);
                 }
 
                 var xmlDoc = new XmlDocument();
-                xmlDoc.Load(_xmlPath);
+                xmlDoc.Load(arguments.XmlPath);
 
                 XmlElement? root = xmlDoc.DocumentElement;
                 StringBuilder resultString = new StringBuilder();
@@ -85,7 +79,8 @@ namespace NUnitXMLReader
 
                                     foreach(var depTest in configuration.Dependences)
                                     {
-                                        var dependent = depTest.Dependents.Where(item => item == result)
+                                        var dependent = depTest.Dependents
+                                            .Where(item => item == result)
                                             .FirstOrDefault();
 
                                         if (dependent != 0)
@@ -102,10 +97,9 @@ namespace NUnitXMLReader
                         }
                         counter++;
                     }
-
                 }
 
-                File.WriteAllText(_resultFilePath, resultString.ToString());
+                File.WriteAllText(arguments.ResultFilePath, resultString.ToString());
             }
             catch(Exception e)
             {
@@ -113,18 +107,6 @@ namespace NUnitXMLReader
                 logger.Trace(e.StackTrace);
             }
             return 0;
-        }
-
-        private static string GetArgValue(string arg) => arg.Split("=")[1];
-
-        private static void PrintInfo()
-        {
-            Console.WriteLine(" - xmlPath: Set the path to the intput NUnit v3 XML file.\n");
-
-            Console.WriteLine(" - resultFilepath: Set the path to the output .txt file with failed tests." +
-                "Default value: Directory.GetCurrentDirectory() + resultFailedTest.txt \n");
-
-            Console.WriteLine(" - -h: info");
         }
     }
 }
