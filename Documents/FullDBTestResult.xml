@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="666" result="Failed" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2022-06-17 13:11:49Z" end-time="2022-06-17 13:17:00Z" duration="310.612323">
+  <command-line><![CDATA["C:\TestAgent\work\892674cf2505679c\packages\NUnit.ConsoleRunner.3.9.0\tools\nunit3-console.exe" AutoTests.Specs\bin\Cloud\AutoTests.Specs.dll /config:AutoTests.testsettings --out:ReportXml\FullDBTestResult.txt --result=ReportXml\FullDBTestResult.xml --labels=All --workers=3 "--where=cat == 6178 || cat == 6181 || cat == 5526 "]]></command-line>
+  <filter>
+    <or>
+      <cat>6178</cat>
+      <cat>6181</cat>
+      <cat>5526</cat>
+    </or>
+  </filter>
+  <test-suite type="Assembly" id="0-1848" name="AutoTests.Specs.dll" fullname="AutoTests.Specs.dll" runstate="Runnable" testcasecount="666" result="Failed" site="Child" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:17:00Z" duration="307.526859" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18362.0" platform="Win32NT" cwd="C:\TestAgent\work\892674cf2505679c" machine-name="QASSOWEB" user="vtechvm" user-domain="QASSOWEB" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="ActiveConfig" value="AutoTests.testsettings" />
+      <setting name="WorkDirectory" value="C:\TestAgent\work\892674cf2505679c" />
+      <setting name="NumberOfTestWorkers" value="3" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+    </settings>
+    <properties>
+      <property name="ParallelScope" value="Fixtures" />
+      <property name="LevelOfParallelism" value="2" />
+      <property name="_PID" value="13172" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1849" name="AutoTests" fullname="AutoTests" runstate="Runnable" testcasecount="666" result="Failed" site="Child" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:17:00Z" duration="307.422405" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <properties />
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="0-1850" name="Specs" fullname="AutoTests.Specs" runstate="Runnable" testcasecount="666" result="Failed" site="Child" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:17:00Z" duration="307.420310" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="0-1852" name="Shipping" fullname="AutoTests.Specs.Shipping" runstate="Runnable" testcasecount="111" result="Failed" site="Child" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:14:54Z" duration="181.398249" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="0-1858" name="Rating" fullname="AutoTests.Specs.Shipping.Rating" runstate="Runnable" testcasecount="37" result="Failed" site="Child" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:14:54Z" duration="181.300895" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="0-1066" name="RateCurrentAndShipProcess_FreightFeature" fullname="AutoTests.Specs.Shipping.Rating.RateCurrentAndShipProcess_FreightFeature" classname="AutoTests.Specs.Shipping.Rating.RateCurrentAndShipProcess_FreightFeature" runstate="Runnable" testcasecount="25" result="Failed" site="Child" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:14:54Z" duration="181.267236" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+              <properties>
+                <property name="Description" value="Rate Current and Ship Process - Freight" />
+              </properties>
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="0-1075" name="RateShipEditAndDeleteShipment_DaytonFreightLines" fullname="AutoTests.Specs.Shipping.Rating.RateCurrentAndShipProcess_FreightFeature.RateShipEditAndDeleteShipment_DaytonFreightLines" methodname="RateShipEditAndDeleteShipment_DaytonFreightLines" classname="AutoTests.Specs.Shipping.Rating.RateCurrentAndShipProcess_FreightFeature" runstate="Runnable" seed="1946120468" result="Failed" label="Error" start-time="2022-06-17 13:12:01Z" end-time="2022-06-17 13:14:54Z" duration="173.054596" asserts="0">
+                <properties>
+                  <property name="Description" value="Rate, Ship, Edit and Delete Shipment - Dayton Freight Lines" />
+                  <property name="Category" value="5526" />
+                  <property name="Category" value="parallel" />
+                  <property name="Category" value="onPrem" />
+                  <property name="Category" value="cloud" />
+                </properties>
+                <failure>
+                  <message><![CDATA[
+There are 1 errors: 
+
+Step 23: 
+
+Step definition: click 'Rate Current' button for 'Total Charges' block on 'Shipment Dialog' page.
+Error: Error pop up is present. Error header: 'Transaction Rate failed due to errors. Check details for more info.'. Error text: 'Dayton Freight
+{ "code": 1602, "message": "The current user does not have access to the specified customer account – 0023632. Only shipper, consignee, or bill-to accounts are valid." }
+StarShip Server
+There are no carriers found for this shipment.'
+
+TearDown : NUnit.Framework.AssertionException : 
+There are 1 errors: 
+
+Step 23: 
+
+Step definition: click 'Rate Current' button for 'Total Charges' block on 'Shipment Dialog' page.
+Error: Error pop up is present. Error header: 'Transaction Rate failed due to errors. Check details for more info.'. Error text: 'Dayton Freight
+{ "code": 1602, "message": "The current user does not have access to the specified customer account – 0023632. Only shipper, consignee, or bill-to accounts are valid." }
+StarShip Server
+There are no carriers found for this shipment.'
+]]></message>
+                  <stack-trace><![CDATA[   at AutoTests.ProjectSpecificCommons.Utils.SoftAssert.AssertAll() in C:\TestAgent\work\892674cf2505679c\AutoTests.ProjectSpecificCommons\Utils\SoftAssert.cs:line 284
+   at AutoTests.Steps.Hooks.AfterScenarioHooks.AssertAll() in C:\TestAgent\work\892674cf2505679c\AutoTests.Steps\Hooks\AfterScenarioHooks.cs:line 110
+
+--TearDown
+   at NUnit.Framework.Assert.ReportFailure(String message) in C:\src\nunit\nunit\src\NUnitFramework\framework\Assert.cs:line 394
+   at AutoTests.ProjectSpecificCommons.Utils.SoftAssert.AssertAll() in C:\TestAgent\work\892674cf2505679c\AutoTests.ProjectSpecificCommons\Utils\SoftAssert.cs:line 284
+   at AutoTests.Steps.Hooks.AfterScenarioHooks.AssertAll() in C:\TestAgent\work\892674cf2505679c\AutoTests.Steps\Hooks\AfterScenarioHooks.cs:line 110
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.InvokeHook(IBindingInvoker invoker, IHookBinding hookBinding, HookType hookType)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.FireEvents(HookType hookType)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.FireScenarioEvents(HookType bindingEvent)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnScenarioEnd()
+   at TechTalk.SpecFlow.TestRunner.OnScenarioEnd()
+   at AutoTests.Specs.Shipping.Rating.RateCurrentAndShipProcess_FreightFeature.ScenarioTearDown()]]></stack-trace>
+                </failure>
+                <output><![CDATA[2022-06-17 09:12:01.2023 [DEBUG] CleanupStores for Rate, Ship, Edit and Delete Shipment - Dayton Freight Lines has been completed
+2022-06-17 09:12:01.3545 [INFO] 
+*** AutoTests.Specs.Shipping.Rating.RateCurrentAndShipProcess_FreightFeature.RateShipEditAndDeleteShipment_DaytonFreightLines
+2022-06-17 09:12:01.3946 [INFO] Start scenario "5526": "Rate, Ship, Edit and Delete Shipment - Dayton Freight Lines"
+2022-06-17 09:12:01.4245 [TRACE] Reloading WebDriver.
+2022-06-17 09:12:01.4545 [TRACE] Chosen browser from config: Chrome
+2022-06-17 09:12:06.4341 [TRACE] Webdriver browser name: Chrome
+2022-06-17 09:12:06.4591 [TRACE] Webdriver browser version: 102.0.5005.115
+2022-06-17 09:12:06.4772 [TRACE] Platform : Windows
+2022-06-17 09:12:06.4885 [TRACE] Browser size: {Width=1812, Height=1096}
+2022-06-17 09:12:06.4885 [TRACE] WebDriver reloaded.
+2022-06-17 09:12:06.5271 [INFO] Navigate to URL: https://a1base.subscription.starshipstaging.online/login?lock=unlock
+2022-06-17 09:12:07.7713 [INFO] Navigate to URL: http://a1base.starshipstaging.online/
+2022-06-17 09:12:09.5232 [TRACE] And STEP 1
+2022-06-17 09:12:09.5861 [TRACE] Given user is logged in with location 'Default' and the following credentials:
+  --- table step argument ---
+  | Username               | Password               |
+  | @Login.BaseDB.UserName | @Login.BaseDB.Password |
+2022-06-17 09:12:36.3653 [INFO] Screenshot[screenshots\Application_20220617091235_ae2df.jpeg]Screenshot
+2022-06-17 09:12:36.3933 [TRACE] And go to 'Shipments' module
+2022-06-17 09:12:36.4133 [INFO] Navigate to URL: http://a1base.starshipstaging.online//Shipments
+2022-06-17 09:12:42.0029 [INFO] Screenshot[screenshots\Application_20220617091241_29602.jpeg]Screenshot
+2022-06-17 09:12:55.9587 [TRACE] When click '×' button if 'test alert' dialog is present
+2022-06-17 09:12:56.0187 [INFO] Check that dialog test alert is present.
+2022-06-17 09:13:11.7741 [INFO] Screenshot[screenshots\Application_20220617091311_2ff25.jpeg]Screenshot
+2022-06-17 09:13:11.8108 [TRACE] And open 'Shipments' on main menu
+2022-06-17 09:13:13.7407 [INFO] Screenshot[screenshots\Application_20220617091313_d406d.jpeg]Screenshot
+2022-06-17 09:13:13.7739 [TRACE] Then 'Shipments' page should be shown
+2022-06-17 09:13:14.2181 [INFO] Screenshot[screenshots\Application_20220617091313_3da59.jpeg]Screenshot
+2022-06-17 09:13:14.2437 [TRACE] When click 'Shipments' tab on 'Shipments' page
+2022-06-17 09:13:14.6868 [INFO] Screenshot[screenshots\Application_20220617091314_d7c99.jpeg]Screenshot
+2022-06-17 09:13:14.7088 [TRACE] Then tab 'Shipments' is opened on 'Shipments' page
+2022-06-17 09:13:15.1662 [INFO] Screenshot[screenshots\Application_20220617091314_48916.jpeg]Screenshot
+2022-06-17 09:13:15.2158 [TRACE] And STEP 2
+2022-06-17 09:13:15.2717 [TRACE] When click 'Create Shipment' action button on 'Shipments' page
+2022-06-17 09:13:19.9868 [INFO] Screenshot[screenshots\Application_20220617091319_51b35.jpeg]Screenshot
+2022-06-17 09:13:20.0008 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Parties/SenderVM.js?ss_v=22.2.0.9636 77:36 "Sender account null is not present in global AccountInfo InterfaceID=AMZ SCAC=null"
+2022-06-17 09:13:20.0008 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.0257 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.0359 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.0501 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/ViewModel/Shipment/Rules/Custom/Custom_a1base_Rules.js?_=1655471556705 - Failed to load resource: the server responded with a status of 404 (Not Found)
+2022-06-17 09:13:20.0501 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Parties/SenderVM.js?ss_v=22.2.0.9636 77:36 "Sender account null is not present in global AccountInfo InterfaceID=AMZ SCAC=null"
+2022-06-17 09:13:20.0668 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.0788 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.0788 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.0978 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/ViewModel/Shipment/Rules/Custom/Custom_a1base_Rules.js?_=1655471556705 - Failed to load resource: the server responded with a status of 404 (Not Found)
+2022-06-17 09:13:20.1341 [TRACE] Then 'Shipment Dialog' page should be shown
+2022-06-17 09:13:20.6296 [INFO] Screenshot[screenshots\Application_20220617091320_adcb7.jpeg]Screenshot
+2022-06-17 09:13:20.6617 [TRACE] And STEP 3
+2022-06-17 09:13:20.7008 [TRACE] When click 'Edit' button for 'Source' block on 'Shipment Dialog' page
+2022-06-17 09:13:21.8099 [INFO] Screenshot[screenshots\Application_20220617091321_213f8.jpeg]Screenshot
+2022-06-17 09:13:21.8406 [TRACE] And click 'OK' button if 'Alert' dialog is present
+2022-06-17 09:13:21.8529 [INFO] Check that dialog Alert is present.
+2022-06-17 09:13:37.6475 [INFO] Screenshot[screenshots\Application_20220617091337_4dfed.jpeg]Screenshot
+2022-06-17 09:13:37.7105 [TRACE] Then 'Edit Source' form should be shown
+2022-06-17 09:13:38.3673 [INFO] Screenshot[screenshots\Application_20220617091337_18edb.jpeg]Screenshot
+2022-06-17 09:13:38.3934 [TRACE] And STEP 4
+2022-06-17 09:13:38.4474 [TRACE] When set '5526' value in 'P.O. #' column on 'Edit Source' form
+2022-06-17 09:13:39.5814 [INFO] Screenshot[screenshots\Application_20220617091339_d33f7.jpeg]Screenshot
+2022-06-17 09:13:39.6033 [TRACE] Then 'P.O. #' column on 'Edit Source' form has '5526' value
+2022-06-17 09:13:40.3408 [INFO] Screenshot[screenshots\Application_20220617091339_2b59c.jpeg]Screenshot
+2022-06-17 09:13:40.3855 [TRACE] And STEP 5
+2022-06-17 09:13:40.4624 [TRACE] When click 'Accept Changes' action button on 'Edit Source' dialog
+2022-06-17 09:13:41.6888 [INFO] Screenshot[screenshots\Application_20220617091340_51765.jpeg]Screenshot
+2022-06-17 09:13:41.7254 [TRACE] Then 'Edit Source' form should not be shown
+2022-06-17 09:13:41.7694 [INFO] Element 'Edit Source' was not found. 
+2022-06-17 09:13:42.4843 [INFO] Screenshot[screenshots\Application_20220617091341_b6594.jpeg]Screenshot
+2022-06-17 09:13:42.5263 [TRACE] And STEP 6
+2022-06-17 09:13:42.5764 [TRACE] When click 'Edit' button for 'Sender' block on 'Shipment Dialog' page
+2022-06-17 09:13:44.3249 [INFO] Screenshot[screenshots\Application_20220617091343_2b4eb.jpeg]Screenshot
+2022-06-17 09:13:44.3529 [TRACE] Then 'Edit Sender' form should be shown
+2022-06-17 09:13:45.0001 [INFO] Screenshot[screenshots\Application_20220617091344_842d9.jpeg]Screenshot
+2022-06-17 09:13:45.0309 [TRACE] And tab 'ADDRESS' is opened on 'Edit Sender' dialog
+2022-06-17 09:13:45.5761 [INFO] Screenshot[screenshots\Application_20220617091345_8b48e.jpeg]Screenshot
+2022-06-17 09:13:45.7129 [TRACE] And STEP 7
+2022-06-17 09:13:45.7560 [TRACE] When select 'Dayton Sender' in 'Address ID' drop-down on 'Edit Sender' form
+2022-06-17 09:13:47.4388 [INFO] Screenshot[screenshots\Application_20220617091347_61b43.jpeg]Screenshot
+2022-06-17 09:13:47.4728 [TRACE] Then 'Dayton Sender' should be selected in 'Address ID' drop-down on 'Edit Sender' form
+2022-06-17 09:13:47.8527 [INFO] Screenshot[screenshots\Application_20220617091347_bd9f6.jpeg]Screenshot
+2022-06-17 09:13:47.8808 [TRACE] And 'Company Name' field is automatically populated on 'Edit Sender' dialog
+2022-06-17 09:13:48.3508 [INFO] Screenshot[screenshots\Application_20220617091347_b9b87.jpeg]Screenshot
+2022-06-17 09:13:48.3748 [TRACE] And STEP 8
+2022-06-17 09:13:48.4108 [TRACE] When click 'Accept Changes' action button on 'Edit Sender' dialog
+2022-06-17 09:13:49.3508 [INFO] Screenshot[screenshots\Application_20220617091348_df260.jpeg]Screenshot
+2022-06-17 09:13:49.4079 [TRACE] Then 'Edit Sender' form should not be shown
+2022-06-17 09:13:49.4588 [INFO] Element 'Edit Sender' was not found. 
+2022-06-17 09:13:50.0678 [INFO] Screenshot[screenshots\Application_20220617091349_3fdf5.jpeg]Screenshot
+2022-06-17 09:13:50.1168 [TRACE] And 'Sender' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:13:50.7570 [INFO] Screenshot[screenshots\Application_20220617091350_fb903.jpeg]Screenshot
+2022-06-17 09:13:50.7907 [TRACE] And STEP 9
+2022-06-17 09:13:50.8461 [TRACE] When click 'Edit' button for 'Recipient' block on 'Shipment Dialog' page
+2022-06-17 09:13:51.7878 [INFO] Screenshot[screenshots\Application_20220617091351_9424f.jpeg]Screenshot
+2022-06-17 09:13:51.8148 [TRACE] Then 'Edit Recipient' form should be shown
+2022-06-17 09:13:52.2375 [INFO] Screenshot[screenshots\Application_20220617091351_5cef8.jpeg]Screenshot
+2022-06-17 09:13:52.2688 [TRACE] And tab 'ADDRESS' is opened on 'Edit Recipient' dialog
+2022-06-17 09:13:52.7978 [INFO] Screenshot[screenshots\Application_20220617091352_6d0d2.jpeg]Screenshot
+2022-06-17 09:13:52.8208 [TRACE] And STEP 10
+2022-06-17 09:13:52.8638 [TRACE] When type 'CUST004' in 'Customer ID' text field on 'Edit Recipient' form
+2022-06-17 09:13:54.3579 [INFO] Screenshot[screenshots\Application_20220617091353_1fe3a.jpeg]Screenshot
+2022-06-17 09:13:54.3978 [TRACE] Then 'CUST004' text should be in 'Customer ID' field on 'Edit Recipient' form
+2022-06-17 09:13:55.1229 [INFO] Screenshot[screenshots\Application_20220617091354_65eb8.jpeg]Screenshot
+2022-06-17 09:13:55.1788 [TRACE] And 'Company Name' field is automatically populated on 'Edit Recipient' dialog
+2022-06-17 09:13:55.9499 [INFO] Screenshot[screenshots\Application_20220617091355_c4508.jpeg]Screenshot
+2022-06-17 09:13:56.0040 [TRACE] And STEP 11
+2022-06-17 09:13:56.0930 [TRACE] When click 'Accept Changes' action button on 'Edit Recipient' dialog
+2022-06-17 09:13:57.2419 [INFO] Screenshot[screenshots\Application_20220617091356_628a2.jpeg]Screenshot
+2022-06-17 09:13:57.2898 [TRACE] Then 'Edit Recipient' form should not be shown
+2022-06-17 09:13:57.3538 [INFO] Element 'Edit Recipient' was not found. 
+2022-06-17 09:13:58.1719 [INFO] Screenshot[screenshots\Application_20220617091357_9bc2a.jpeg]Screenshot
+2022-06-17 09:13:58.2120 [TRACE] And 'Recipient' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:13:59.0810 [INFO] Screenshot[screenshots\Application_20220617091358_6adea.jpeg]Screenshot
+2022-06-17 09:13:59.1468 [TRACE] And STEP 12
+2022-06-17 09:13:59.2412 [TRACE] When click 'Edit' button for 'Transportation' block on 'Shipment Dialog' page
+2022-06-17 09:14:00.7249 [INFO] Screenshot[screenshots\Application_20220617091400_de0a8.jpeg]Screenshot
+2022-06-17 09:14:00.7599 [TRACE] Then 'Edit Transportation' form should be shown
+2022-06-17 09:14:01.5393 [INFO] Screenshot[screenshots\Application_20220617091400_95176.jpeg]Screenshot
+2022-06-17 09:14:01.5888 [TRACE] And STEP 13
+2022-06-17 09:14:01.6448 [TRACE] When select 'Dayton Freight Lines' in 'Carrier' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:05.6152 [INFO] Screenshot[screenshots\Application_20220617091405_579a8.jpeg]Screenshot
+2022-06-17 09:14:05.6431 [TRACE] Then 'Dayton Freight Lines' should be selected in 'Carrier' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:06.5272 [INFO] Screenshot[screenshots\Application_20220617091405_5d1d7.jpeg]Screenshot
+2022-06-17 09:14:06.5642 [TRACE] And 'Select a Service' should not be selected in 'Service' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:07.3672 [INFO] Screenshot[screenshots\Application_20220617091406_389d7.jpeg]Screenshot
+2022-06-17 09:14:07.4081 [TRACE] And 'No Accounts Available' should not be selected in 'Account' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:08.0522 [INFO] Screenshot[screenshots\Application_20220617091407_e1a6c.jpeg]Screenshot
+2022-06-17 09:14:08.0822 [TRACE] And shipment page title equal 'New Freight Shipment' on 'Shipment Editor' menu
+2022-06-17 09:14:08.5193 [INFO] Screenshot[screenshots\Application_20220617091408_ed9c9.jpeg]Screenshot
+2022-06-17 09:14:08.5613 [TRACE] And STEP 14
+2022-06-17 09:14:08.6447 [TRACE] When select 'DF/Dayton Acct (0023632)' in 'Account' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:09.3686 [INFO] Screenshot[screenshots\Application_20220617091408_ac29c.jpeg]Screenshot
+2022-06-17 09:14:09.4011 [TRACE] Then 'DF/Dayton Acct (0023632)' should be selected in 'Account' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:09.8473 [INFO] Screenshot[screenshots\Application_20220617091409_ddb61.jpeg]Screenshot
+2022-06-17 09:14:09.8772 [TRACE] And STEP 15
+2022-06-17 09:14:09.9141 [TRACE] When select 'Standard LTL' in 'Service' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:10.3052 [INFO] Screenshot[screenshots\Application_20220617091409_928d7.jpeg]Screenshot
+2022-06-17 09:14:10.3271 [TRACE] Then 'Standard LTL' should be selected in 'Service' drop-down on 'Edit Transportation' form
+2022-06-17 09:14:10.6793 [INFO] Screenshot[screenshots\Application_20220617091410_d3389.jpeg]Screenshot
+2022-06-17 09:14:10.7031 [TRACE] And STEP 16
+2022-06-17 09:14:10.7366 [TRACE] When click 'Accept Changes' action button on 'Edit Transportation' dialog
+2022-06-17 09:14:11.4522 [INFO] Screenshot[screenshots\Application_20220617091410_19b50.jpeg]Screenshot
+2022-06-17 09:14:11.4801 [TRACE] Then 'Edit Transportation' form should not be shown
+2022-06-17 09:14:11.5221 [INFO] Element 'Edit Transportation' was not found. 
+2022-06-17 09:14:11.9187 [INFO] Screenshot[screenshots\Application_20220617091411_24ead.jpeg]Screenshot
+2022-06-17 09:14:11.9521 [TRACE] And 'Transportation' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:14:12.3753 [INFO] Screenshot[screenshots\Application_20220617091412_e7578.jpeg]Screenshot
+2022-06-17 09:14:12.4033 [TRACE] And STEP 17
+2022-06-17 09:14:12.4354 [TRACE] When click 'Edit' button for 'Line Items' block on 'Shipment Dialog' page
+2022-06-17 09:14:13.0817 [INFO] Screenshot[screenshots\Application_20220617091412_9e83c.jpeg]Screenshot
+2022-06-17 09:14:13.1034 [TRACE] Then 'Edit Line Items' form should be shown
+2022-06-17 09:14:13.5246 [INFO] Screenshot[screenshots\Application_20220617091413_8ff8a.jpeg]Screenshot
+2022-06-17 09:14:13.5483 [TRACE] And STEP 18
+2022-06-17 09:14:13.5813 [TRACE] When click 'Add Item' action button on 'Edit Line Items' dialog
+2022-06-17 09:14:18.3953 [INFO] Screenshot[screenshots\Application_20220617091417_c7154.jpeg]Screenshot
+2022-06-17 09:14:18.4594 [TRACE] Then 'Search for Inventory Items' dialog should be shown
+2022-06-17 09:14:19.3591 [INFO] Screenshot[screenshots\Application_20220617091418_88dd8.jpeg]Screenshot
+2022-06-17 09:14:19.4232 [TRACE] And STEP 19
+2022-06-17 09:14:19.5072 [TRACE] When search for 'Item020' item on 'Search for Inventory Items' dialog
+2022-06-17 09:14:21.0554 [INFO] Screenshot[screenshots\Application_20220617091420_5f38d.jpeg]Screenshot
+2022-06-17 09:14:21.6462 [TRACE] Then item 'Item020' is displayed on '1' row in table on 'Search for Inventory Items' dialog
+2022-06-17 09:14:22.5173 [INFO] Screenshot[screenshots\Application_20220617091421_51b41.jpeg]Screenshot
+2022-06-17 09:14:22.5953 [TRACE] When click select for 'Item020' item on 'Search for Inventory Items' dialog
+2022-06-17 09:14:23.4185 [INFO] Screenshot[screenshots\Application_20220617091422_72510.jpeg]Screenshot
+2022-06-17 09:14:25.5083 [TRACE] Then 'Item Quantity' dialog should be shown
+2022-06-17 09:14:26.1243 [INFO] Screenshot[screenshots\Application_20220617091425_c49c9.jpeg]Screenshot
+2022-06-17 09:14:26.1805 [TRACE] And quantity equals '1' on 'Item Quantity' dialog
+2022-06-17 09:14:26.7384 [INFO] Screenshot[screenshots\Application_20220617091426_d8ae2.jpeg]Screenshot
+2022-06-17 09:14:26.7713 [TRACE] And STEP 20
+2022-06-17 09:14:26.8023 [TRACE] When click 'OK' button on 'Item Quantity' dialog
+2022-06-17 09:14:31.9424 [INFO] "OK" button is present on the "Item Quantity" dialog
+2022-06-17 09:14:34.6504 [INFO] Screenshot[screenshots\Application_20220617091434_18cdd.jpeg]Screenshot
+2022-06-17 09:14:34.7034 [TRACE] Then 'Item Quantity' dialog should not be shown
+2022-06-17 09:14:34.7905 [INFO] Element 'Item Quantity' was not found. 
+2022-06-17 09:14:35.5238 [INFO] Screenshot[screenshots\Application_20220617091434_a61e3.jpeg]Screenshot
+2022-06-17 09:14:35.5755 [TRACE] And 'Search for Inventory Items' dialog should be shown
+2022-06-17 09:14:36.4038 [INFO] Screenshot[screenshots\Application_20220617091435_6df38.jpeg]Screenshot
+2022-06-17 09:14:36.4665 [TRACE] And STEP 21
+2022-06-17 09:14:36.5398 [TRACE] When close 'Search for Inventory Items' modal form
+2022-06-17 09:14:37.8465 [INFO] Screenshot[screenshots\Application_20220617091437_bc462.jpeg]Screenshot
+2022-06-17 09:14:37.9124 [TRACE] Then 'Search for Inventory Items' dialog should not be shown
+2022-06-17 09:14:38.0225 [INFO] Element 'Search for Inventory Items' was not found. 
+2022-06-17 09:14:38.7473 [INFO] Screenshot[screenshots\Application_20220617091438_2559f.jpeg]Screenshot
+2022-06-17 09:14:38.8155 [TRACE] And 'Item020' is displayed in table on 'Edit Line Items' form
+2022-06-17 09:14:42.1786 [INFO] Screenshot[screenshots\Application_20220617091441_0260f.jpeg]Screenshot
+2022-06-17 09:14:42.2178 [TRACE] And STEP 22
+2022-06-17 09:14:42.2744 [TRACE] When click 'Accept Changes' action button on 'Edit Line Items' dialog
+2022-06-17 09:14:43.3053 [INFO] Screenshot[screenshots\Application_20220617091442_4c387.jpeg]Screenshot
+2022-06-17 09:14:43.4223 [TRACE] Then 'Edit Line Items' form should not be shown
+2022-06-17 09:14:43.6125 [INFO] Element 'Edit Line Items' was not found. 
+2022-06-17 09:14:44.1143 [INFO] Screenshot[screenshots\Application_20220617091443_f5ecd.jpeg]Screenshot
+2022-06-17 09:14:44.1554 [TRACE] And 'Line Items' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:14:44.6958 [INFO] Screenshot[screenshots\Application_20220617091444_74753.jpeg]Screenshot
+2022-06-17 09:14:44.7223 [WARN] Browser console error: https://a1base.starshipstaging.online//Shipments - Access to XMLHttpRequest at 'https://checkin.purechat.com/api/checkin' from origin 'https://a1base.starshipstaging.online' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+2022-06-17 09:14:44.7425 [WARN] Browser console error: https://checkin.purechat.com/api/checkin - Failed to load resource: net::ERR_FAILED
+2022-06-17 09:14:44.7518 [WARN] Browser console error: https://a1base.starshipstaging.online//Shipments - Access to XMLHttpRequest at 'https://checkin.purechat.com/api/checkin' from origin 'https://a1base.starshipstaging.online' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+2022-06-17 09:14:44.7518 [WARN] Browser console error: https://checkin.purechat.com/api/checkin - Failed to load resource: net::ERR_FAILED
+2022-06-17 09:14:44.8044 [TRACE] And STEP 23
+2022-06-17 09:14:44.8463 [TRACE] When click 'Rate Current' button for 'Total Charges' block on 'Shipment Dialog' page
+2022-06-17 09:14:45.6964 [INFO] Screenshot[screenshots\Application_20220617091445_8da84.jpeg]Screenshot
+2022-06-17 09:14:48.2094 [INFO] Screenshot[screenshots\Application_20220617091447_d1099.jpeg]Screenshot
+2022-06-17 09:14:48.2273 [ERROR] 
+Step definition: click 'Rate Current' button for 'Total Charges' block on 'Shipment Dialog' page.
+Error: Error pop up is present. Error header: 'Transaction Rate failed due to errors. Check details for more info.'. Error text: 'Dayton Freight
+{ "code": 1602, "message": "The current user does not have access to the specified customer account – 0023632. Only shipper, consignee, or bill-to accounts are valid." }
+StarShip Server
+There are no carriers found for this shipment.'
+2022-06-17 09:14:48.4983 [DEBUG] AfterScenario actions have started for 'Rate, Ship, Edit and Delete Shipment - Dayton Freight Lines'
+2022-06-17 09:14:48.5111 [INFO] Finish scenario "Rate, Ship, Edit and Delete Shipment - Dayton Freight Lines"
+]]></output>
+                <assertions>
+                  <assertion result="Failed">
+                    <message><![CDATA[
+There are 1 errors: 
+
+Step 23: 
+
+Step definition: click 'Rate Current' button for 'Total Charges' block on 'Shipment Dialog' page.
+Error: Error pop up is present. Error header: 'Transaction Rate failed due to errors. Check details for more info.'. Error text: 'Dayton Freight
+{ "code": 1602, "message": "The current user does not have access to the specified customer account – 0023632. Only shipper, consignee, or bill-to accounts are valid." }
+StarShip Server
+There are no carriers found for this shipment.'
+]]></message>
+                    <stack-trace><![CDATA[   at AutoTests.ProjectSpecificCommons.Utils.SoftAssert.AssertAll() in C:\TestAgent\work\892674cf2505679c\AutoTests.ProjectSpecificCommons\Utils\SoftAssert.cs:line 284
+   at AutoTests.Steps.Hooks.AfterScenarioHooks.AssertAll() in C:\TestAgent\work\892674cf2505679c\AutoTests.Steps\Hooks\AfterScenarioHooks.cs:line 110
+]]></stack-trace>
+                  </assertion>
+                </assertions>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1871" name="BusinessRules" fullname="AutoTests.Specs.BusinessRules" runstate="Runnable" testcasecount="416" result="Passed" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:17:00Z" duration="307.420276" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="0-1874" name="FedEx" fullname="AutoTests.Specs.BusinessRules.FedEx" runstate="Runnable" testcasecount="184" result="Passed" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:17:00Z" duration="307.420261" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="0-1635" name="FedExC_O_D_OptionFeature" fullname="AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature" classname="AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature" runstate="Runnable" testcasecount="9" result="Passed" start-time="2022-06-17 13:11:52Z" end-time="2022-06-17 13:17:00Z" duration="307.420094" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+              <properties>
+                <property name="Description" value="FedEx C.O.D. Option" />
+              </properties>
+              <output><![CDATA[-> Using app.config
+]]></output>
+              <test-case id="0-1641" name="FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExGround" fullname="AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature.FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExGround" methodname="FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExGround" classname="AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature" runstate="Runnable" seed="324703998" result="Passed" start-time="2022-06-17 13:12:01Z" end-time="2022-06-17 13:14:32Z" duration="151.100020" asserts="0">
+                <properties>
+                  <property name="Description" value="[FDX] Confirm that the C.O.D. option is available with FedEx Ground®" />
+                  <property name="Category" value="6178" />
+                  <property name="Category" value="parallel" />
+                  <property name="Category" value="onPrem" />
+                  <property name="Category" value="cloud" />
+                </properties>
+                <output><![CDATA[2022-06-17 09:12:01.2017 [DEBUG] CleanupStores for [FDX] Confirm that the C.O.D. option is available with FedEx Ground® has been completed
+2022-06-17 09:12:01.3365 [INFO] 
+*** AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature.FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExGround
+2022-06-17 09:12:01.3778 [INFO] Start scenario "6178": "[FDX] Confirm that the C.O.D. option is available with FedEx Ground®"
+2022-06-17 09:12:01.4245 [TRACE] Reloading WebDriver.
+2022-06-17 09:12:01.4545 [TRACE] Chosen browser from config: Chrome
+2022-06-17 09:12:06.5341 [TRACE] Webdriver browser name: Chrome
+2022-06-17 09:12:06.5830 [TRACE] Webdriver browser version: 102.0.5005.115
+2022-06-17 09:12:06.5947 [TRACE] Platform : Windows
+2022-06-17 09:12:06.5947 [TRACE] Browser size: {Width=1812, Height=1096}
+2022-06-17 09:12:06.6174 [TRACE] WebDriver reloaded.
+2022-06-17 09:12:06.6352 [INFO] Navigate to URL: https://a1base.subscription.starshipstaging.online/login?lock=unlock
+2022-06-17 09:12:07.9043 [INFO] Navigate to URL: http://a1base.starshipstaging.online/
+2022-06-17 09:12:09.0631 [TRACE] And STEP 1
+2022-06-17 09:12:09.3351 [TRACE] Given user is logged in with location 'Default' and the following credentials:
+  --- table step argument ---
+  | Username               | Password               |
+  | @Login.BaseDB.UserName | @Login.BaseDB.Password |
+2022-06-17 09:12:36.3533 [INFO] Screenshot[screenshots\Application_20220617091235_fd4fc.jpeg]Screenshot
+2022-06-17 09:12:36.3933 [TRACE] And go to 'Shipments' module
+2022-06-17 09:12:36.4273 [INFO] Navigate to URL: http://a1base.starshipstaging.online//Shipments
+2022-06-17 09:12:42.1960 [INFO] Screenshot[screenshots\Application_20220617091241_28a57.jpeg]Screenshot
+2022-06-17 09:12:55.8318 [TRACE] When click '×' button if 'test alert' dialog is present
+2022-06-17 09:12:55.9587 [INFO] Check that dialog test alert is present.
+2022-06-17 09:13:11.8781 [INFO] Screenshot[screenshots\Application_20220617091311_187ab.jpeg]Screenshot
+2022-06-17 09:13:11.9167 [TRACE] And open 'Shipments' on main menu
+2022-06-17 09:13:14.1428 [INFO] Screenshot[screenshots\Application_20220617091313_ce5ce.jpeg]Screenshot
+2022-06-17 09:13:14.1728 [TRACE] Then 'Shipments' page should be shown
+2022-06-17 09:13:14.5801 [INFO] Screenshot[screenshots\Application_20220617091314_5ec87.jpeg]Screenshot
+2022-06-17 09:13:14.6037 [TRACE] And STEP 2
+2022-06-17 09:13:14.6397 [TRACE] When click 'Create Shipment' action button on 'Shipments' page
+2022-06-17 09:13:20.1401 [INFO] Screenshot[screenshots\Application_20220617091319_ee1f4.jpeg]Screenshot
+2022-06-17 09:13:20.1581 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Parties/SenderVM.js?ss_v=22.2.0.9636 77:36 "Sender account null is not present in global AccountInfo InterfaceID=AMZ SCAC=null"
+2022-06-17 09:13:20.1721 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.1721 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.1967 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.2068 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/ViewModel/Shipment/Rules/Custom/Custom_a1base_Rules.js?_=1655471556734 - Failed to load resource: the server responded with a status of 404 (Not Found)
+2022-06-17 09:13:20.2228 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Parties/SenderVM.js?ss_v=22.2.0.9636 77:36 "Sender account null is not present in global AccountInfo InterfaceID=AMZ SCAC=null"
+2022-06-17 09:13:20.2228 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.2388 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.2388 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:13:20.2547 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/ViewModel/Shipment/Rules/Custom/Custom_a1base_Rules.js?_=1655471556734 - Failed to load resource: the server responded with a status of 404 (Not Found)
+2022-06-17 09:13:20.2886 [TRACE] Then 'Shipment Dialog' page should be shown
+2022-06-17 09:13:20.7587 [INFO] Screenshot[screenshots\Application_20220617091320_aa9a7.jpeg]Screenshot
+2022-06-17 09:13:20.7857 [TRACE] And STEP 3
+2022-06-17 09:13:20.8206 [TRACE] When click 'Edit' button for 'Recipient' block on 'Shipment Dialog' page
+2022-06-17 09:13:22.0807 [INFO] Screenshot[screenshots\Application_20220617091321_a47eb.jpeg]Screenshot
+2022-06-17 09:13:22.1028 [TRACE] Then 'Edit Recipient' form should be shown
+2022-06-17 09:13:22.8299 [INFO] Screenshot[screenshots\Application_20220617091322_11668.jpeg]Screenshot
+2022-06-17 09:13:22.8958 [TRACE] And tab 'ADDRESS' is opened on 'Edit Recipient' dialog
+2022-06-17 09:13:23.8688 [INFO] Screenshot[screenshots\Application_20220617091323_c583a.jpeg]Screenshot
+2022-06-17 09:13:23.9508 [TRACE] And STEP 4
+2022-06-17 09:13:24.0607 [TRACE] When type 'CUST004' in 'Customer ID' text field on 'Edit Recipient' form
+2022-06-17 09:13:26.1106 [INFO] Screenshot[screenshots\Application_20220617091325_62518.jpeg]Screenshot
+2022-06-17 09:13:26.6986 [TRACE] Then 'CUST004' text should be in 'Customer ID' field on 'Edit Recipient' form
+2022-06-17 09:13:27.7087 [INFO] Screenshot[screenshots\Application_20220617091326_f2a67.jpeg]Screenshot
+2022-06-17 09:13:27.7657 [TRACE] And 'Company Name' field is automatically populated on 'Edit Recipient' dialog
+2022-06-17 09:13:28.5177 [INFO] Screenshot[screenshots\Application_20220617091327_0bab8.jpeg]Screenshot
+2022-06-17 09:13:28.5627 [TRACE] And STEP 5
+2022-06-17 09:13:28.6408 [TRACE] When click 'Accept Changes' action button on 'Edit Recipient' dialog
+2022-06-17 09:13:30.0088 [INFO] Screenshot[screenshots\Application_20220617091329_53591.jpeg]Screenshot
+2022-06-17 09:13:30.1108 [TRACE] Then 'Shipment Dialog' page should be shown
+2022-06-17 09:13:30.7728 [INFO] Screenshot[screenshots\Application_20220617091330_e4f0a.jpeg]Screenshot
+2022-06-17 09:13:30.8096 [TRACE] And 'Recipient' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:13:31.7197 [INFO] Screenshot[screenshots\Application_20220617091330_b3e9b.jpeg]Screenshot
+2022-06-17 09:13:31.8088 [TRACE] And STEP 6
+2022-06-17 09:13:31.9109 [TRACE] When click 'Edit' button for 'Transportation' block on 'Shipment Dialog' page
+2022-06-17 09:13:33.6475 [INFO] Screenshot[screenshots\Application_20220617091332_dbf61.jpeg]Screenshot
+2022-06-17 09:13:33.7095 [TRACE] Then 'Edit Transportation' form should be shown
+2022-06-17 09:13:34.6553 [INFO] Screenshot[screenshots\Application_20220617091333_a044e.jpeg]Screenshot
+2022-06-17 09:13:34.7234 [TRACE] And STEP 7
+2022-06-17 09:13:34.8133 [TRACE] When select 'FedEx' in 'Carrier' drop-down on 'Edit Transportation' form
+2022-06-17 09:13:38.5773 [INFO] Screenshot[screenshots\Application_20220617091338_6662a.jpeg]Screenshot
+2022-06-17 09:13:38.5773 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Snapshots/RatingSnapshotVM.js?ss_v=22.2.0.9636 36:28 "Removing redundant fields for FX that already exist in the BASE RatingSnapshot."
+2022-06-17 09:13:38.5954 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Snapshots/RatingSnapshotVM.js?ss_v=22.2.0.9636 36:28 "Removing redundant fields for FX that already exist in the BASE RatingSnapshot."
+2022-06-17 09:13:39.1364 [TRACE] Then 'FedEx' should be selected in 'Carrier' drop-down on 'Edit Transportation' form
+2022-06-17 09:13:39.7483 [INFO] Screenshot[screenshots\Application_20220617091339_dbbbf.jpeg]Screenshot
+2022-06-17 09:13:40.9594 [TRACE] And STEP 8
+2022-06-17 09:13:40.9983 [TRACE] When select 'FedEx Ground®' in 'Service' drop-down on 'Edit Transportation' form
+2022-06-17 09:13:41.7543 [INFO] Screenshot[screenshots\Application_20220617091341_b2736.jpeg]Screenshot
+2022-06-17 09:13:41.7863 [TRACE] Then 'FedEx Ground®' should be selected in 'Service' drop-down on 'Edit Transportation' form
+2022-06-17 09:13:42.4534 [INFO] Screenshot[screenshots\Application_20220617091341_bfda0.jpeg]Screenshot
+2022-06-17 09:13:42.4843 [TRACE] And STEP 9
+2022-06-17 09:13:42.5323 [TRACE] When click 'Accept Changes' action button on 'Edit Transportation' dialog
+2022-06-17 09:13:43.4701 [INFO] Screenshot[screenshots\Application_20220617091342_40c80.jpeg]Screenshot
+2022-06-17 09:13:43.5081 [TRACE] Then 'Shipment Dialog' page should be shown
+2022-06-17 09:13:44.3819 [INFO] Screenshot[screenshots\Application_20220617091343_4b66f.jpeg]Screenshot
+2022-06-17 09:13:44.4094 [TRACE] And 'Transportation' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:13:45.0309 [INFO] Screenshot[screenshots\Application_20220617091344_933a1.jpeg]Screenshot
+2022-06-17 09:13:45.0639 [TRACE] And STEP 10
+2022-06-17 09:13:45.1080 [TRACE] When click 'Edit' button for 'Shipment Details' block on 'Shipment Dialog' page
+2022-06-17 09:13:46.2111 [INFO] Screenshot[screenshots\Application_20220617091345_f07fa.jpeg]Screenshot
+2022-06-17 09:13:46.2512 [TRACE] Then 'Edit Shipment Details' form should be shown
+2022-06-17 09:13:46.7007 [INFO] Screenshot[screenshots\Application_20220617091346_e4b80.jpeg]Screenshot
+2022-06-17 09:13:46.7268 [TRACE] And STEP 11
+2022-06-17 09:13:46.7628 [TRACE] When check 'FedEx Ground® C.O.D.' checkbox on 'Edit Shipment Details' form
+2022-06-17 09:13:47.7868 [INFO] Screenshot[screenshots\Application_20220617091347_2be9c.jpeg]Screenshot
+2022-06-17 09:13:47.8158 [TRACE] Then checkbox 'FedEx Ground® C.O.D.' on 'Edit Shipment Details' form is checked
+2022-06-17 09:13:48.2848 [INFO] Screenshot[screenshots\Application_20220617091347_f8cee.jpeg]Screenshot
+2022-06-17 09:13:49.3508 [TRACE] And section below 'FedEx Ground® C.O.D.' option is opened in table on 'Edit Shipment Details' form
+2022-06-17 09:13:50.0298 [INFO] Screenshot[screenshots\Application_20220617091349_76c30.jpeg]Screenshot
+2022-06-17 09:13:50.0678 [TRACE] And 'Guaranteed Funds Only' label is shown for 'FedEx Ground® C.O.D.' field in table on 'Edit Shipment Details' form
+2022-06-17 09:13:50.7570 [INFO] Screenshot[screenshots\Application_20220617091350_1fbdd.jpeg]Screenshot
+2022-06-17 09:13:50.8162 [TRACE] And 'Guaranteed Funds Only' label for 'FedEx Ground® C.O.D.' field has 'DarkGray' color in table on 'Edit Shipment Details' form
+2022-06-17 09:13:51.3148 [INFO] Screenshot[screenshots\Application_20220617091350_e0841.jpeg]Screenshot
+2022-06-17 09:13:51.3444 [TRACE] And STEP 12
+2022-06-17 09:13:51.4079 [TRACE] When select 'Packages Individually' in 'Apply To' drop-down on 'Edit Shipment Details' form for 'FedEx Ground® C.O.D.' option
+2022-06-17 09:13:52.8208 [INFO] Screenshot[screenshots\Application_20220617091352_8be2c.jpeg]Screenshot
+2022-06-17 09:13:52.8478 [TRACE] Then 'Packages Individually' should be selected in 'Apply To' drop-down for 'FedEx Ground® C.O.D.' option on 'Edit Shipment Details' form
+2022-06-17 09:13:53.3978 [INFO] Screenshot[screenshots\Application_20220617091352_305d4.jpeg]Screenshot
+2022-06-17 09:13:53.4410 [TRACE] And 'Base Amount' field is not displayed on 'Edit Shipment Details' form
+2022-06-17 09:14:09.4153 [INFO] Screenshot[screenshots\Application_20220617091408_1203d.jpeg]Screenshot
+2022-06-17 09:14:09.4721 [TRACE] And STEP 13
+2022-06-17 09:14:09.5151 [TRACE] Then 'FedEx Ground® C.O.D.' field row is disable on 'Edit Shipment Details' page
+2022-06-17 09:14:09.9713 [INFO] Screenshot[screenshots\Application_20220617091409_829e3.jpeg]Screenshot
+2022-06-17 09:14:10.0111 [TRACE] And 'FedEx Ground® C.O.D.' option in the table is displayed in 'Gray' color on 'Edit Shipment Details' form
+2022-06-17 09:14:10.3901 [INFO] Screenshot[screenshots\Application_20220617091410_d9e92.jpeg]Screenshot
+2022-06-17 09:14:10.4142 [TRACE] And checkbox 'FedEx Ground® C.O.D.' on 'Edit Shipment Details' form is checked
+2022-06-17 09:14:10.7792 [INFO] Screenshot[screenshots\Application_20220617091410_8e324.jpeg]Screenshot
+2022-06-17 09:14:10.8111 [TRACE] And STEP 14
+2022-06-17 09:14:10.8571 [TRACE] When click icon with title 'Additional Information' for 'FedEx Ground® C.O.D.' field on 'Edit Shipment Details' form
+2022-06-17 09:14:11.7133 [INFO] Screenshot[screenshots\Application_20220617091411_856be.jpeg]Screenshot
+2022-06-17 09:14:11.7461 [TRACE] Then 'Tooltip' page should be shown
+2022-06-17 09:14:12.1307 [INFO] Screenshot[screenshots\Application_20220617091411_51591.jpeg]Screenshot
+2022-06-17 09:14:12.2766 [TRACE] And tooltip has 'ADDITIONAL INFORMATION' header
+2022-06-17 09:14:12.6375 [INFO] Screenshot[screenshots\Application_20220617091412_c42e4.jpeg]Screenshot
+2022-06-17 09:14:12.6604 [TRACE] And STEP 15
+2022-06-17 09:14:12.7463 [TRACE] Then explanation 'The Shipment Option C.O.D. (Select) is enabled when the Shipment Option C.O.D. Distribution Mode is not equal to "Process by Package".' is displayed on tooltip
+2022-06-17 09:14:13.1513 [INFO] Screenshot[screenshots\Application_20220617091412_85c2d.jpeg]Screenshot
+2022-06-17 09:14:13.1754 [TRACE] And explanation 'FedEx C.O.D. is available with the following shipping services: FedEx Priority Overnight®, FedEx Standard Overnight®, FedEx 2Day®, FedEx 2Day® A.M., FedEx Express Saver®, FedEx 1Day® Freight, FedEx 2Day® Freight, FedEx 3Day® Freight, FedEx Ground®, and FedEx International Ground®.' is displayed on tooltip
+2022-06-17 09:14:13.5813 [INFO] Screenshot[screenshots\Application_20220617091413_0cc25.jpeg]Screenshot
+2022-06-17 09:14:13.6173 [TRACE] And STEP 16
+2022-06-17 09:14:13.6574 [TRACE] When click 'Close' in 'Shipment Editor' menu
+2022-06-17 09:14:14.7546 [INFO] Screenshot[screenshots\Application_20220617091413_7eba4.jpeg]Screenshot
+2022-06-17 09:14:14.8014 [TRACE] Then 'Alert' page should be shown
+2022-06-17 09:14:15.7193 [INFO] Screenshot[screenshots\Application_20220617091414_47eb4.jpeg]Screenshot
+2022-06-17 09:14:15.7803 [TRACE] When click 'No' button on 'Alert' dialog
+2022-06-17 09:14:21.1282 [INFO] "No" button is present on the "Alert" dialog
+2022-06-17 09:14:22.6874 [INFO] Screenshot[screenshots\Application_20220617091421_87ec8.jpeg]Screenshot
+2022-06-17 09:14:22.7425 [TRACE] Then 'Alert' page should not be shown
+2022-06-17 09:14:23.1283 [INFO] Element 'Alert' was not found. 
+2022-06-17 09:14:23.5374 [INFO] Screenshot[screenshots\Application_20220617091423_62b44.jpeg]Screenshot
+2022-06-17 09:14:23.5744 [TRACE] And 'Shipment Dialog' page should not be shown
+2022-06-17 09:14:23.6214 [INFO] Element 'Shipment Dialog' was not found. 
+2022-06-17 09:14:24.3123 [INFO] Screenshot[screenshots\Application_20220617091423_bd215.jpeg]Screenshot
+2022-06-17 09:14:24.3634 [TRACE] And STEP 17
+2022-06-17 09:14:24.4233 [TRACE] Then user is logged out
+2022-06-17 09:14:24.5408 [INFO] Element 'Alert message' was not found. 
+2022-06-17 09:14:27.2304 [INFO] Screenshot[screenshots\Application_20220617091426_976b9.jpeg]Screenshot
+2022-06-17 09:14:27.3103 [DEBUG] AfterScenario actions have started for '[FDX] Confirm that the C.O.D. option is available with FedEx Ground®'
+2022-06-17 09:14:27.3305 [INFO] Finish scenario "[FDX] Confirm that the C.O.D. option is available with FedEx Ground®"
+]]></output>
+              </test-case>
+              <test-case id="0-1644" name="FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExInternationalGround" fullname="AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature.FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExInternationalGround" methodname="FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExInternationalGround" classname="AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature" runstate="Runnable" seed="322766081" result="Passed" start-time="2022-06-17 13:14:32Z" end-time="2022-06-17 13:17:00Z" duration="148.099311" asserts="0">
+                <properties>
+                  <property name="Description" value="[FDX] Confirm that the C.O.D. option is available with FedEx International Ground®" />
+                  <property name="Category" value="6181" />
+                  <property name="Category" value="parallel" />
+                  <property name="Category" value="onPrem" />
+                  <property name="Category" value="cloud" />
+                </properties>
+                <output><![CDATA[2022-06-17 09:14:32.1825 [DEBUG] CleanupStores for [FDX] Confirm that the C.O.D. option is available with FedEx International Ground® has been completed
+2022-06-17 09:14:32.2125 [INFO] 
+*** AutoTests.Specs.BusinessRules.FedEx.FedExC_O_D_OptionFeature.FDXConfirmThatTheC_O_D_OptionIsAvailableWithFedExInternationalGround
+2022-06-17 09:14:32.2283 [INFO] Start scenario "6181": "[FDX] Confirm that the C.O.D. option is available with FedEx International Ground®"
+2022-06-17 09:14:32.2784 [TRACE] Reloading WebDriver.
+2022-06-17 09:14:40.3553 [TRACE] Chosen browser from config: Chrome
+2022-06-17 09:14:42.6473 [TRACE] Webdriver browser name: Chrome
+2022-06-17 09:14:42.6598 [TRACE] Webdriver browser version: 102.0.5005.115
+2022-06-17 09:14:42.6598 [TRACE] Platform : Windows
+2022-06-17 09:14:42.6823 [TRACE] Browser size: {Width=1812, Height=1096}
+2022-06-17 09:14:42.7023 [TRACE] WebDriver reloaded.
+2022-06-17 09:14:42.7383 [INFO] Navigate to URL: https://a1base.subscription.starshipstaging.online/login?lock=unlock
+2022-06-17 09:14:43.7963 [INFO] Navigate to URL: http://a1base.starshipstaging.online/
+2022-06-17 09:14:49.7101 [TRACE] And STEP 1
+2022-06-17 09:14:49.7921 [TRACE] Given user is logged in with location 'Default' and the following credentials:
+  --- table step argument ---
+  | Username               | Password               |
+  | @Login.BaseDB.UserName | @Login.BaseDB.Password |
+2022-06-17 09:14:57.6240 [INFO] Screenshot[screenshots\Application_20220617091457_84601.jpeg]Screenshot
+2022-06-17 09:14:57.6741 [TRACE] And go to 'Shipments' module
+2022-06-17 09:14:57.6890 [INFO] Navigate to URL: http://a1base.starshipstaging.online//Shipments
+2022-06-17 09:15:00.9507 [INFO] Screenshot[screenshots\Application_20220617091500_32ad5.jpeg]Screenshot
+2022-06-17 09:15:08.5749 [TRACE] When click '×' button if 'test alert' dialog is present
+2022-06-17 09:15:08.6131 [INFO] Check that dialog test alert is present.
+2022-06-17 09:15:24.6960 [INFO] Screenshot[screenshots\Application_20220617091524_a67ef.jpeg]Screenshot
+2022-06-17 09:15:24.7540 [TRACE] And open 'Shipments' on main menu
+2022-06-17 09:15:28.0952 [INFO] Screenshot[screenshots\Application_20220617091527_1b604.jpeg]Screenshot
+2022-06-17 09:15:28.1893 [TRACE] Then 'Shipments' page should be shown
+2022-06-17 09:15:29.1873 [INFO] Screenshot[screenshots\Application_20220617091528_867cb.jpeg]Screenshot
+2022-06-17 09:15:29.2594 [TRACE] And STEP 2
+2022-06-17 09:15:29.5203 [TRACE] When click 'Create Shipment' action button on 'Shipments' page
+2022-06-17 09:15:34.5320 [INFO] Screenshot[screenshots\Application_20220617091533_02fa9.jpeg]Screenshot
+2022-06-17 09:15:34.5673 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Parties/SenderVM.js?ss_v=22.2.0.9636 77:36 "Sender account null is not present in global AccountInfo InterfaceID=AMZ SCAC=null"
+2022-06-17 09:15:34.5873 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:15:34.6092 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:15:34.6314 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:15:34.6533 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/ViewModel/Shipment/Rules/Custom/Custom_a1base_Rules.js?_=1655471697877 - Failed to load resource: the server responded with a status of 404 (Not Found)
+2022-06-17 09:15:34.6773 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Parties/SenderVM.js?ss_v=22.2.0.9636 77:36 "Sender account null is not present in global AccountInfo InterfaceID=AMZ SCAC=null"
+2022-06-17 09:15:34.6966 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:15:34.7140 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:15:34.7321 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/Layout.js?v=22.2.0.9636 890:24 "Permission ConfigureTabOrder not found."
+2022-06-17 09:15:34.7493 [WARN] Browser console error: https://a1base.starshipstaging.online/Scripts/ViewModel/Shipment/Rules/Custom/Custom_a1base_Rules.js?_=1655471697877 - Failed to load resource: the server responded with a status of 404 (Not Found)
+2022-06-17 09:15:34.8267 [TRACE] Then 'Shipment Dialog' page should be shown
+2022-06-17 09:15:35.7561 [INFO] Screenshot[screenshots\Application_20220617091535_4f011.jpeg]Screenshot
+2022-06-17 09:15:35.8261 [TRACE] And STEP 3
+2022-06-17 09:15:35.9420 [TRACE] When click 'Edit' button for 'Recipient' block on 'Shipment Dialog' page
+2022-06-17 09:15:37.5581 [INFO] Screenshot[screenshots\Application_20220617091537_75fd0.jpeg]Screenshot
+2022-06-17 09:15:37.6240 [TRACE] Then 'Edit Recipient' form should be shown
+2022-06-17 09:15:38.4333 [INFO] Screenshot[screenshots\Application_20220617091537_31a57.jpeg]Screenshot
+2022-06-17 09:15:38.5041 [TRACE] And tab 'ADDRESS' is opened on 'Edit Recipient' dialog
+2022-06-17 09:15:39.3645 [INFO] Screenshot[screenshots\Application_20220617091538_88d39.jpeg]Screenshot
+2022-06-17 09:15:39.4252 [TRACE] And STEP 4
+2022-06-17 09:15:39.5181 [TRACE] When type 'ONTARIO' in 'Customer ID' text field on 'Edit Recipient' form
+2022-06-17 09:15:41.4741 [INFO] Screenshot[screenshots\Application_20220617091540_42083.jpeg]Screenshot
+2022-06-17 09:15:41.5493 [TRACE] Then 'ONTARIO' text should be in 'Customer ID' field on 'Edit Recipient' form
+2022-06-17 09:15:42.4290 [INFO] Screenshot[screenshots\Application_20220617091541_9df54.jpeg]Screenshot
+2022-06-17 09:15:42.4881 [TRACE] And 'Company Name' field is automatically populated on 'Edit Recipient' dialog
+2022-06-17 09:15:43.3700 [INFO] Screenshot[screenshots\Application_20220617091542_1a482.jpeg]Screenshot
+2022-06-17 09:15:43.4381 [TRACE] And STEP 5
+2022-06-17 09:15:43.5311 [TRACE] When click 'Accept Changes' action button on 'Edit Recipient' dialog
+2022-06-17 09:15:44.8960 [INFO] Screenshot[screenshots\Application_20220617091544_0ee63.jpeg]Screenshot
+2022-06-17 09:15:44.9561 [TRACE] Then 'Shipment Dialog' page should be shown
+2022-06-17 09:15:45.8031 [INFO] Screenshot[screenshots\Application_20220617091545_4dbca.jpeg]Screenshot
+2022-06-17 09:15:45.8764 [TRACE] And 'Recipient' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:15:46.7501 [INFO] Screenshot[screenshots\Application_20220617091546_17c3f.jpeg]Screenshot
+2022-06-17 09:15:46.8171 [TRACE] And STEP 6
+2022-06-17 09:15:46.9220 [TRACE] When click 'Edit' button for 'Transportation' block on 'Shipment Dialog' page
+2022-06-17 09:15:49.3271 [INFO] Screenshot[screenshots\Application_20220617091548_516b6.jpeg]Screenshot
+2022-06-17 09:15:49.3981 [TRACE] Then 'Edit Transportation' form should be shown
+2022-06-17 09:15:50.3185 [INFO] Screenshot[screenshots\Application_20220617091549_ec6eb.jpeg]Screenshot
+2022-06-17 09:15:50.3871 [TRACE] And STEP 7
+2022-06-17 09:15:50.4711 [TRACE] When select 'FedEx' in 'Carrier' drop-down on 'Edit Transportation' form
+2022-06-17 09:15:56.2191 [INFO] Screenshot[screenshots\Application_20220617091555_131b7.jpeg]Screenshot
+2022-06-17 09:15:56.2522 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Snapshots/RatingSnapshotVM.js?ss_v=22.2.0.9636 36:28 "Removing redundant fields for FX that already exist in the BASE RatingSnapshot."
+2022-06-17 09:15:56.2683 [WARN] Browser console error: https://a1base.starshipstaging.online//Scripts/ViewModel/Shipment/Snapshots/RatingSnapshotVM.js?ss_v=22.2.0.9636 36:28 "Removing redundant fields for FX that already exist in the BASE RatingSnapshot."
+2022-06-17 09:15:56.8464 [TRACE] Then 'FedEx' should be selected in 'Carrier' drop-down on 'Edit Transportation' form
+2022-06-17 09:15:57.7711 [INFO] Screenshot[screenshots\Application_20220617091557_133d0.jpeg]Screenshot
+2022-06-17 09:15:57.8364 [TRACE] And STEP 8
+2022-06-17 09:15:57.9251 [TRACE] When select 'FedEx Ground®' in 'Service' drop-down on 'Edit Transportation' form
+2022-06-17 09:15:58.7730 [INFO] Screenshot[screenshots\Application_20220617091558_b507f.jpeg]Screenshot
+2022-06-17 09:15:58.8441 [TRACE] Then 'FedEx Ground®' should be selected in 'Service' drop-down on 'Edit Transportation' form
+2022-06-17 09:15:59.6911 [INFO] Screenshot[screenshots\Application_20220617091559_dec70.jpeg]Screenshot
+2022-06-17 09:15:59.7711 [TRACE] And STEP 9
+2022-06-17 09:15:59.8771 [TRACE] When click 'Accept Changes' action button on 'Edit Transportation' dialog
+2022-06-17 09:16:01.3371 [INFO] Screenshot[screenshots\Application_20220617091600_825e5.jpeg]Screenshot
+2022-06-17 09:16:01.4064 [TRACE] Then 'Shipment Dialog' page should be shown
+2022-06-17 09:16:02.3080 [INFO] Screenshot[screenshots\Application_20220617091601_89c34.jpeg]Screenshot
+2022-06-17 09:16:02.4012 [TRACE] And 'Transportation' block is shown in collapsed view on 'Shipment Dialog' page
+2022-06-17 09:16:03.3005 [INFO] Screenshot[screenshots\Application_20220617091602_c1e1c.jpeg]Screenshot
+2022-06-17 09:16:03.3751 [TRACE] And STEP 10
+2022-06-17 09:16:03.4792 [TRACE] When click 'Edit' button for 'Shipment Details' block on 'Shipment Dialog' page
+2022-06-17 09:16:06.0832 [INFO] Screenshot[screenshots\Application_20220617091605_e80d1.jpeg]Screenshot
+2022-06-17 09:16:06.1591 [TRACE] Then 'Edit Shipment Details' form should be shown
+2022-06-17 09:16:07.0291 [INFO] Screenshot[screenshots\Application_20220617091606_ef3c3.jpeg]Screenshot
+2022-06-17 09:16:07.1011 [TRACE] And STEP 11
+2022-06-17 09:16:07.2221 [TRACE] When check 'FedEx Ground® C.O.D.' checkbox on 'Edit Shipment Details' form
+2022-06-17 09:16:09.1160 [INFO] Screenshot[screenshots\Application_20220617091608_0fd7d.jpeg]Screenshot
+2022-06-17 09:16:09.7479 [TRACE] Then checkbox 'FedEx Ground® C.O.D.' on 'Edit Shipment Details' form is checked
+2022-06-17 09:16:10.5812 [INFO] Screenshot[screenshots\Application_20220617091609_a36b9.jpeg]Screenshot
+2022-06-17 09:16:10.6504 [TRACE] And section below 'FedEx Ground® C.O.D.' option is opened in table on 'Edit Shipment Details' form
+2022-06-17 09:16:11.4644 [INFO] Screenshot[screenshots\Application_20220617091610_0afff.jpeg]Screenshot
+2022-06-17 09:16:11.5340 [TRACE] And 'Guaranteed Funds Only' label is shown for 'FedEx Ground® C.O.D.' field in table on 'Edit Shipment Details' form
+2022-06-17 09:16:12.3781 [INFO] Screenshot[screenshots\Application_20220617091611_bde4f.jpeg]Screenshot
+2022-06-17 09:16:12.4581 [TRACE] And 'Guaranteed Funds Only' label for 'FedEx Ground® C.O.D.' field has 'DarkGray' color in table on 'Edit Shipment Details' form
+2022-06-17 09:16:13.2889 [INFO] Screenshot[screenshots\Application_20220617091612_38b4d.jpeg]Screenshot
+2022-06-17 09:16:13.3560 [TRACE] And STEP 12
+2022-06-17 09:16:13.4579 [TRACE] When select 'Packages Individually' in 'Apply To' drop-down on 'Edit Shipment Details' form for 'FedEx Ground® C.O.D.' option
+2022-06-17 09:16:15.8721 [INFO] Screenshot[screenshots\Application_20220617091615_c5bdf.jpeg]Screenshot
+2022-06-17 09:16:16.2121 [TRACE] Then 'Packages Individually' should be selected in 'Apply To' drop-down for 'FedEx Ground® C.O.D.' option on 'Edit Shipment Details' form
+2022-06-17 09:16:17.1100 [INFO] Screenshot[screenshots\Application_20220617091616_9af10.jpeg]Screenshot
+2022-06-17 09:16:17.1813 [TRACE] And 'Base Amount' field is not displayed on 'Edit Shipment Details' form
+2022-06-17 09:16:33.0041 [INFO] Screenshot[screenshots\Application_20220617091632_40e68.jpeg]Screenshot
+2022-06-17 09:16:33.0701 [TRACE] And STEP 13
+2022-06-17 09:16:33.1630 [TRACE] Then 'FedEx Ground® C.O.D.' field row is disable on 'Edit Shipment Details' page
+2022-06-17 09:16:34.0259 [INFO] Screenshot[screenshots\Application_20220617091633_eb23e.jpeg]Screenshot
+2022-06-17 09:16:34.0689 [TRACE] And 'FedEx Ground® C.O.D.' option in the table is displayed in 'Gray' color on 'Edit Shipment Details' form
+2022-06-17 09:16:34.7933 [INFO] Screenshot[screenshots\Application_20220617091634_0dc3f.jpeg]Screenshot
+2022-06-17 09:16:35.0500 [TRACE] And checkbox 'FedEx Ground® C.O.D.' on 'Edit Shipment Details' form is checked
+2022-06-17 09:16:35.8509 [INFO] Screenshot[screenshots\Application_20220617091635_e361f.jpeg]Screenshot
+2022-06-17 09:16:35.9141 [TRACE] And STEP 14
+2022-06-17 09:16:36.0009 [TRACE] When click icon with title 'Additional Information' for 'FedEx Ground® C.O.D.' field on 'Edit Shipment Details' form
+2022-06-17 09:16:37.4341 [INFO] Screenshot[screenshots\Application_20220617091636_3da32.jpeg]Screenshot
+2022-06-17 09:16:37.5009 [TRACE] Then 'Tooltip' page should be shown
+2022-06-17 09:16:38.3261 [INFO] Screenshot[screenshots\Application_20220617091637_8f001.jpeg]Screenshot
+2022-06-17 09:16:38.3950 [TRACE] And tooltip has 'ADDITIONAL INFORMATION' header
+2022-06-17 09:16:39.2261 [INFO] Screenshot[screenshots\Application_20220617091638_d0cfb.jpeg]Screenshot
+2022-06-17 09:16:39.2934 [TRACE] And STEP 15
+2022-06-17 09:16:39.3921 [TRACE] Then explanation 'The Shipment Option C.O.D. (Select) is enabled when the Shipment Option C.O.D. Distribution Mode is not equal to "Process by Package".' is displayed on tooltip
+2022-06-17 09:16:40.2220 [INFO] Screenshot[screenshots\Application_20220617091639_3f7b0.jpeg]Screenshot
+2022-06-17 09:16:40.2961 [TRACE] And explanation 'FedEx C.O.D. is available with the following shipping services: FedEx Priority Overnight®, FedEx Standard Overnight®, FedEx 2Day®, FedEx 2Day® A.M., FedEx Express Saver®, FedEx 1Day® Freight, FedEx 2Day® Freight, FedEx 3Day® Freight, FedEx Ground®, and FedEx International Ground®.' is displayed on tooltip
+2022-06-17 09:16:41.0501 [INFO] Screenshot[screenshots\Application_20220617091640_a45ac.jpeg]Screenshot
+2022-06-17 09:16:41.1140 [TRACE] And STEP 16
+2022-06-17 09:16:41.1989 [TRACE] When click 'Close' in 'Shipment Editor' menu
+2022-06-17 09:16:42.2287 [INFO] Screenshot[screenshots\Application_20220617091641_eac15.jpeg]Screenshot
+2022-06-17 09:16:42.2594 [TRACE] Then 'Alert' page should be shown
+2022-06-17 09:16:43.1004 [INFO] Screenshot[screenshots\Application_20220617091642_717ea.jpeg]Screenshot
+2022-06-17 09:16:43.1522 [TRACE] When click 'No' button on 'Alert' dialog
+2022-06-17 09:16:48.5906 [INFO] "No" button is present on the "Alert" dialog
+2022-06-17 09:16:50.1344 [INFO] Screenshot[screenshots\Application_20220617091649_eca68.jpeg]Screenshot
+2022-06-17 09:16:50.2087 [TRACE] Then 'Alert' page should not be shown
+2022-06-17 09:16:50.3163 [INFO] Element 'Alert' was not found. 
+2022-06-17 09:16:51.0194 [INFO] Screenshot[screenshots\Application_20220617091650_ae5e2.jpeg]Screenshot
+2022-06-17 09:16:51.0896 [TRACE] And 'Shipment Dialog' page should not be shown
+2022-06-17 09:16:51.2058 [INFO] Element 'Shipment Dialog' was not found. 
+2022-06-17 09:16:51.9214 [INFO] Screenshot[screenshots\Application_20220617091651_180e1.jpeg]Screenshot
+2022-06-17 09:16:52.0055 [TRACE] And STEP 17
+2022-06-17 09:16:52.0868 [TRACE] Then user is logged out
+2022-06-17 09:16:52.1984 [INFO] Element 'Alert message' was not found. 
+2022-06-17 09:16:55.3644 [INFO] Screenshot[screenshots\Application_20220617091654_2e706.jpeg]Screenshot
+2022-06-17 09:16:55.4164 [DEBUG] AfterScenario actions have started for '[FDX] Confirm that the C.O.D. option is available with FedEx International Ground®'
+2022-06-17 09:16:55.4344 [INFO] Finish scenario "[FDX] Confirm that the C.O.D. option is available with FedEx International Ground®"
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

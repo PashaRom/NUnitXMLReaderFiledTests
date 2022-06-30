@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using NUnitXMLReader.Models;
 using System.Text.Json;
 
@@ -6,7 +7,7 @@ namespace NUnitXMLReader
 {
     public sealed class Configuration
     {
-        public static readonly string _configPath = Path.Combine(Directory.GetCurrentDirectory(), fileConfig);
+        public static readonly string _configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileConfig);
         public const string fileConfig = "setting.json";
         private static ConfigModel _config;
 

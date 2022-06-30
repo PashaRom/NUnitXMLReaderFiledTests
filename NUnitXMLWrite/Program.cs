@@ -69,8 +69,19 @@ namespace NUnitXMLReader
                                 var numberOfTestCase = property.GetAttribute(propertyAtributName);
                                 if(int.TryParse(numberOfTestCase, out int result))
                                 {
-                                    Console.Write(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
-                                    resultString.Append(testCasesList.Count != counter ? $"cat == {result} || " : $"cat == {result}");
+                                    var stringResult = string.Empty;
+
+                                    if(counter == 1 || testCasesList.Count == counter)
+                                    {
+                                        stringResult = $"cat == {result}";
+                                    }
+                                    else if(testCasesList.Count != counter)
+                                    {
+                                        stringResult = $"cat == {result} || ";
+                                    }
+
+                                    Console.Write(stringResult);
+                                    resultString.Append(stringResult);
 
                                     foreach(var depTest in configuration.Dependences)
                                     {
@@ -101,7 +112,6 @@ namespace NUnitXMLReader
                 logger.Error(e.Message);
                 logger.Trace(e.StackTrace);
             }
-            //Console.ReadKey();
             return 0;
         }
 
