@@ -65,13 +65,17 @@ namespace NUnitXMLReader
                                 {
                                     var stringResult = string.Empty;
 
-                                    if(counter == 1 || testCasesList.Count == counter)
+                                    if(counter == 1 && testCasesList.Count == counter)
                                     {
                                         stringResult = $"cat == {result}";
                                     }
                                     else if(testCasesList.Count != counter)
                                     {
                                         stringResult = $"cat == {result} || ";
+                                    }
+                                    else
+                                    {
+                                        stringResult = $"cat == {result}";
                                     }
 
                                     Console.Write(stringResult);
