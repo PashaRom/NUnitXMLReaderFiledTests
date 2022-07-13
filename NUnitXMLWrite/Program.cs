@@ -46,11 +46,10 @@ namespace NUnitXMLReader
 
                 XmlElement? root = xmlDoc.DocumentElement;
                 StringBuilder resultString = new StringBuilder();
-
-                if(root != null)
+                var counterFailedTest = 0;
+                if (root != null)
                 {
                     XmlNodeList testCasesList = root.GetElementsByTagName(testCaseElementName);
-                    var counter = 1;
                     foreach(XmlElement testCase in testCasesList)
                     {
                         var resultAtribute = testCase.GetAttribute(resultAtributeName);
@@ -63,35 +62,18 @@ namespace NUnitXMLReader
                                 var numberOfTestCase = property.GetAttribute(propertyAtributName);
                                 if(int.TryParse(numberOfTestCase, out int result))
                                 {
-                                    var stringResult = string.Empty;
-
-                                    if(counter == 1 && testCasesList.Count == counter)
-                                    {
-                                        stringResult = $"cat == {result}";
-                                    }
-                                    else if(testCasesList.Count != counter)
-                                    {
-                                        stringResult = $"cat == {result} || ";
-                                    }
-                                    else
-                                    {
-                                        stringResult = $"cat == {result}";
-                                    }
-
-                                    Console.Write(stringResult);
-                                    resultString.Append(stringResult);
-
+                                    resultString.Append($"cat == {result} || ");
+                                    counterFailedTest++;
                                     foreach(var depTest in configuration.Dependences)
                                     {
                                         var dependent = depTest.Dependents
-                                            .Where(item => item == result)
                                             .FirstOrDefault();
 
                                         if (dependent != 0)
                                         {
                                             if (!depTest.Added)
                                             {
-                                                resultString.Append(testCasesList.Count != counter ? $"cat == {depTest.Main} || " : $"cat == {depTest.Main}");
+                                                resultString.Append($"cat == {depTest.Main} || ");
                                                 depTest.Added = true;
                                             }
                                         }
@@ -99,11 +81,15 @@ namespace NUnitXMLReader
                                 }
                             }
                         }
-                        counter++;
                     }
                 }
 
-                File.WriteAllText(arguments.ResultFilePath, resultString.ToString());
+                var resultFailedString = resultString.Remove(resultString.Length - 3, 3).ToString();
+
+                File.WriteAllText(arguments.ResultFilePath, resultFailedString);
+
+                Console.WriteLine($"Failed test: {counterFailedTest}");
+                Console.WriteLine(resultFailedString);
             }
             catch(Exception e)
             {
