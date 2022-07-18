@@ -31,14 +31,17 @@ namespace NUnitXMLReader
 
                 Argument arguments = new Argument(args);
 
-                if(WaitCondition.Retry(
-                    () => !File.Exists(arguments.XmlPath),
-                    arguments.Retry,
-                    TimeSpan.FromSeconds(arguments.Timeout)))
+                if (!WaitCondition.WaitAndRetry(
+                    () => File.Exists(arguments.XmlPath),
+                    () => {
+                        var errorMessage = $"File '{arguments.XmlPath}' is not exist after retry {arguments.Retry} times.";
+                        Console.WriteLine(errorMessage);
+                        logger.Error(errorMessage);
+                    },
+                    3,
+                    TimeSpan.FromSeconds(2)))
                 {
-                    var errorMessage = $"File '{arguments.XmlPath}' is not exist after retry {arguments.Retry} times.";
-                    Console.WriteLine(errorMessage);
-                    logger.Error(errorMessage);
+                    return 2;
                 }
 
                 var xmlDoc = new XmlDocument();
